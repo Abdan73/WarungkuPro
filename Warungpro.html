@@ -1,114 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>📊 Dashboard — Warungku</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#1e88e5">
-<style>
-:root {
-  --primary: #1e88e5;
-  --bg: #f9fafb;
-  --text: #333;
-  --white: #fff;
-}
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>📊 Dashboard — Warungku</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#1e88e5">
+    <style>
+        :root {
+          --primary: #1e88e5;
+          --bg: #f9fafb;
+          --text: #333;
+          --white: #fff;
+        }
+        body {
+          margin: 0;
+          font-family: 'Segoe UI', sans-serif;
+          background: var(--bg);
+          color: var(--text);
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
 
-/* 🔹 Navbar atas */
-.navbar {
-  background: var(--white);
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 10;
-  position: sticky;
-  top: 0;
-}
-.navbar h1 {
-  margin: 0;
-  font-size: 18px;
-}
-.navbar button {
-  background: none;
-  border: none;
-  font-size: 22px;
-  color: var(--primary);
-  cursor: pointer;
-}
+        /* 🔹 Navbar atas */
+        .navbar {
+          background: var(--white);
+          color: var(--primary);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 15px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          z-index: 10;
+          position: sticky;
+          top: 0;
+        }
+        .navbar h1 {
+          margin: 0;
+          font-size: 18px;
+        }
+        .navbar button {
+          background: none;
+          border: none;
+          font-size: 22px;
+          color: var(--primary);
+          cursor: pointer;
+        }
 
-/* 🔹 Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 230px;
-  height: 100%;
-  background: var(--white);
-  box-shadow: 2px 0 6px rgba(0,0,0,0.1);
-  padding-top: 60px;
-  transition: left 0.3s ease;
-  z-index: 9;
-}
-.sidebar.active { left: 0; }
-.sidebar a {
-  display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  color: var(--text);
-  text-decoration: none;
-  transition: 0.2s;
-}
-.sidebar a i {
-  width: 25px;
-  text-align: center;
-  margin-right: 10px;
-  color: var(--primary);
-}
-.sidebar a:hover, .sidebar a.active {
-  background: var(--primary);
-  color: #fff;
-}
-.sidebar a:hover i, .sidebar a.active i {
-  color: #fff;
-}
+        /* 🔹 Sidebar */
+        .sidebar {
+          position: fixed;
+          top: 0;
+          left: -250px;
+          width: 230px;
+          height: 100%;
+          background: var(--white);
+          box-shadow: 2px 0 6px rgba(0,0,0,0.1);
+          padding-top: 60px;
+          transition: left 0.3s ease;
+          z-index: 9;
+        }
+        .sidebar.active { left: 0; }
+        .sidebar a {
+          display: flex;
+          align-items: center;
+          padding: 12px 20px;
+          color: var(--text);
+          text-decoration: none;
+          transition: 0.2s;
+        }
+        .sidebar a i {
+          width: 25px;
+          text-align: center;
+          margin-right: 10px;
+          color: var(--primary);
+        }
+        .sidebar a:hover, .sidebar a.active {
+          background: var(--primary);
+          color: #fff;
+        }
+        .sidebar a:hover i, .sidebar a.active i {
+          color: #fff;
+        }
 
-/* 🔹 Konten utama */
-.main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-iframe {
-  flex: 1;
-  border: none;
-  width: 100%;
-  height: 100%;
-}
+        /* 🔹 Konten utama */
+        .main {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+        iframe {
+          flex: 1;
+          border: none;
+          width: 100%;
+          height: 100%;
+        }
 
-/* 🔹 Desktop: sidebar selalu muncul */
-@media (min-width: 800px) {
-  .sidebar { left: 0; position: relative; height: auto; width: 220px; }
-  body { flex-direction: row; }
-  .main { flex: 1; }
-  .navbar { position: fixed; top: 0; left: 220px; right: 0; }
-  iframe { margin-top: 50px; }
-}
-</style>
+        /* 🔹 Desktop: sidebar selalu muncul */
+        @media (min-width: 800px) {
+          .sidebar { left: 0; position: relative; height: auto; width: 220px; }
+          body { flex-direction: row; }
+          .main { flex: 1; }
+          .navbar { position: fixed; top: 0; left: 220px; right: 0; }
+          iframe { margin-top: 50px; }
+        }
+    </style>
 </head>
 <body>
 
