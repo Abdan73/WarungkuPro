@@ -1,3 +1,38 @@
+Saya memahami Anda ingin langsung memiliki URL untuk dashboard Warungku. Sebagai AI, saya tidak dapat melakukan hosting langsung, tetapi saya akan memberikan beberapa solusi praktis untuk membuat dashboard Anda langsung online:
+
+🚀 Solusi Hosting Gratis & Cepat
+
+1. GitHub Pages (Paling Recommended)
+
+```bash
+# Langkah-langkah:
+1. Buat akun GitHub (gratis)
+2. Buat repository baru
+3. Upload file HTML ke repository
+4. Aktifkan GitHub Pages di settings
+5. Dapat URL: https://username.github.io/repository-name
+```
+
+2. Netlify (Drag & Drop)
+
+· Kunjungi netlify.com
+· Drag file HTML ke area upload
+· Langsung dapat URL gratis
+
+3. Vercel
+
+· vercel.com - import dari GitHub
+
+4. Google Sites
+
+· Masuk ke sites.google.com
+· Buat situs baru → Embed → Tempel kode HTML
+
+📋 File HTML Siap Hosting
+
+Berikut kode lengkap yang siap diupload ke platform hosting manapun:
+
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -26,7 +61,6 @@
           overflow: hidden;
         }
 
-        /* 🔹 Navbar atas */
         .navbar {
           background: var(--white);
           color: var(--primary);
@@ -51,7 +85,6 @@
           cursor: pointer;
         }
 
-        /* 🔹 Sidebar */
         .sidebar {
           position: fixed;
           top: 0;
@@ -87,7 +120,6 @@
           color: #fff;
         }
 
-        /* 🔹 Konten utama */
         .main {
           flex: 1;
           display: flex;
@@ -100,7 +132,6 @@
           height: 100%;
         }
 
-        /* 🔹 Desktop: sidebar selalu muncul */
         @media (min-width: 800px) {
           .sidebar { left: 0; position: relative; height: auto; width: 220px; }
           body { flex-direction: row; }
@@ -112,7 +143,6 @@
 </head>
 <body>
 
-<!-- 🔹 Sidebar -->
 <div class="sidebar" id="sidebar">
   <a href="#" class="active" data-url="https://script.google.com/macros/s/AKfycbzSnUjlTyBpqAqQa4yE1Jrhyq5FaAt25kV6-SojpRqI0cfr19RbRXUS_Vl2iBPue_el/exec?page=Report"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
   <a href="#" data-url="https://script.google.com/macros/s/AKfycbzSnUjlTyBpqAqQa4yE1Jrhyq5FaAt25kV6-SojpRqI0cfr19RbRXUS_Vl2iBPue_el/exec?page=Formkasir"><i class="fa-solid fa-cash-register"></i> Transaksi</a>
@@ -123,7 +153,6 @@
   <a href="#" data-url="https://sites.google.com/view/warunku/report-penjualan/terlaris"><i class="fa-solid fa-fire"></i> Terlaris</a>
 </div>
 
-<!-- 🔹 Main -->
 <div class="main">
   <div class="navbar">
     <button id="menuBtn"><i class="fa-solid fa-bars"></i></button>
@@ -160,3 +189,10 @@ links.forEach(link => {
 
 </body>
 </html>
+```
+
+⚡ Solusi Tercepat:
+
+Netlify Drop - Kunjungi netlify.com/drop dan drag file HTML tersebut, langsung dapat URL dalam hitungan detik!
+
+Apakah Anda ingin saya bantu menjelaskan salah satu metode tersebut lebih detail?
